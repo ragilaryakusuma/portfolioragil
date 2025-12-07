@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Ragil Arya Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+        .portfolio-detail {
+            min-height: 100vh;
+            padding: 8rem 2rem 4rem;
+            background: var(--bg-color);
+        }
+        
+        .detail-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--card-bg);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+        
+        .back-btn:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateX(-5px);
+        }
+        
+        .detail-header {
+            margin-bottom: 3rem;
+        }
+        
+        .detail-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .detail-meta {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 1.5rem 0;
+            border-bottom: 2px solid var(--card-bg);
+            margin-bottom: 2rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        
+        .meta-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-color);
+        }
+        
+        .meta-value {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+        
+        .detail-description {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+        }
+        
+        .detail-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .image-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .detail-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .detail-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-caption {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+        
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 3rem 0 1.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .tech-tag {
+            padding: 0.5rem 1.25rem;
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-tag:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+        
+        .github-section {
+            margin-top: 4rem;
+            padding: 3rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 3rem;
+            background: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .github-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dark-mode .github-link {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <div class="scroll-progress"></div>
+    
+    <div class="theme-toggle" id="themeToggle">
+        <i class="bi bi-moon-stars-fill"></i>
+    </div>
+
+    <section class="portfolio-detail">
+        <div class="detail-container">
+            <a href="../index.html#portfolio" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+                <span data-en="Back to Portfolio" data-id="Kembali ke Portfolio">Back to Portfolio</span>
+            </a>
+            
+            <div class="detail-header">
+                <h1 class="detail-title" data-en="Web Development" data-id="Pengembangan Web">Web Development</h1>
+                
+                <div class="detail-meta">
+                    <div class="meta-item">
+                        <span class="meta-label" data-en="Category" data-id="Kategori">CATEGORY</span>
+                        <span class="meta-value" data-en="Development" data-id="Development">Development</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label" data-en="Tools" data-id="Tools">TOOLS</span>
+                        <span class="meta-value">HTML, CSS, JavaScript, React</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="detail-description" data-en="Modern responsive web applications built with cutting-edge technologies and best practices. This project demonstrates proficiency in front-end development, implementing interactive features, smooth animations, and cross-browser compatibility. Focused on clean code architecture, performance optimization, and delivering exceptional user experiences across all devices." data-id="Aplikasi web responsif modern yang dibangun dengan teknologi terkini dan praktik terbaik. Proyek ini mendemonstrasikan kemahiran dalam pengembangan front-end, mengimplementasikan fitur interaktif, animasi halus, dan kompatibilitas lintas browser. Berfokus pada arsitektur kode yang bersih, optimasi performa, dan memberikan pengalaman pengguna yang luar biasa di semua perangkat.">
+                Modern responsive web applications built with cutting-edge technologies and best practices. This project demonstrates proficiency in front-end development, implementing interactive features, smooth animations, and cross-browser compatibility. Focused on clean code architecture, performance optimization, and delivering exceptional user experiences across all devices.
+            </div>
+            
+            <h2 class="section-heading" data-en="Project Gallery" data-id="Galeri Proyek">Project Gallery</h2>
+            <div class="detail-images">
+                <div class="image-wrapper">
+                    <img src="../images/portfolio/detail/web-development/1.jpg" alt="Homepage Interface" class="detail-image">
+                    <p class="image-caption" data-en="Homepage Interface" data-id="Antarmuka Beranda">Homepage Interface</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="../images/portfolio/detail/web-development/2.jpg" alt="Interactive Features" class="detail-image">
+                    <p class="image-caption" data-en="Interactive Features" data-id="Fitur Interaktif">Interactive Features</p>
+                </div>
+            </div>
+            
+            <h2 class="section-heading" data-en="Tools & Technologies" data-id="Tools & Teknologi">Tools & Technologies</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">React</span>
+            </div>
+            
+            <div class="github-section">
+                <h2 class="section-heading" data-en="View Source Files" data-id="Lihat File Sumber">View Source Files</h2>
+                <p class="detail-description" data-en="Check out the project files and resources on GitHub" data-id="Lihat file proyek dan resource di GitHub">Check out the project files and resources on GitHub</p>
+                <!-- Ganti dengan link GitHub kamu -->
+                <a href="https://github.com/yourusername/graphic-design-project" target="_blank" rel="noopener noreferrer" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span data-en="View on GitHub" data-id="Lihat di GitHub">View on GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

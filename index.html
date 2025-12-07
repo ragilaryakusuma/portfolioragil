@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website Ragil Arya - UI/UX Designer & Multimedia Specialist. Showcasing creative design projects, photography, and video production work.">
+    <meta name="keywords" content="Ragil Arya, UI/UX Designer, Multimedia Specialist, Portfolio, Web Design, Photography, Video Production">
+    <meta name="author" content="Ragil Arya">
+    <title>Ragil Arya | Creative Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle" id="themeToggle">
+        <i class="bi bi-moon-stars-fill"></i>
+    </div>
+
+    <!-- Language Toggle (EN/ID) -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="id">ID</button>
+    </div>
+
+    <!-- Side Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="active" data-text="Home"></a></li>
+            <li><a href="#about" data-text="About"></a></li>
+            <li><a href="#portfolio" data-text="Portfolio"></a></li>
+            <li><a href="#skills" data-text="Skills"></a></li>
+            <li><a href="#contact" data-text="Contact"></a></li>
+        </ul>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="home">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <p class="hero-label" data-en="— ANJAY —" data-id="— ANJAY —">— ANJAY —</p>
+            <p class="hero-specialty" data-en="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist" data-id="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist">UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist</p>
+            <h1 class="hero-title" data-en="RAGIL ARYA KUSUMA" data-id="RAGIL ARYA KUSUMA">RAGIL ARYA KUSUMA</h1>
+            <p class="hero-subtitle" data-en="Multimedia Engineering Technology Student at PENS" data-id="Mahasiswa Teknologi Rekayasa Multimedia PENS">Multimedia Engineering Technology Student at PENS</p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="btn btn-primary" data-en="View My Work" data-id="Lihat Karya Saya">View My Work</a>
+                <a href="#contact" class="btn btn-outline" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section class="about" id="about">
+        <div class="about-image">
+            <img src="images/foto_ragil.jpg" alt="Ragil Arya Kusuma">
+        </div>
+        <div class="about-content">
+            <h2 data-en="About Me" data-id="Tentang Saya">About Me</h2>
+            <p data-en="Student of Multimedia Engineering Technology at Politeknik Elektronika Negeri Surabaya. I have a strong interest and skills in UI/UX Design and Frontend Development with experience in interface design, website development, and creative content production such as photography, videography, and graphic design." data-id="Mahasiswa Teknologi Rekayasa Multimedia di Politeknik Elektronika Negeri Surabaya. Memiliki minat dan kemampuan di bidang UI/UX Design dan Frontend Development dengan pengalaman dalam desain antarmuka, pembuatan website, serta produksi konten kreatif seperti fotografi, videografi, dan desain grafis.">Student of Multimedia Engineering Technology at Politeknik Elektronika Negeri Surabaya. I have a strong interest and skills in UI/UX Design and Frontend Development with experience in interface design, website development, and creative content production such as photography, videography, and graphic design.</p>
+            <p data-en="Ready to contribute professionally in a collaborative and innovative work environment. My approach combines creativity with technical expertise to deliver exceptional digital experiences that are both functional and visually appealing." data-id="Siap berkontribusi secara profesional dalam lingkungan kerja yang kolaboratif dan inovatif. Pendekatan saya menggabungkan kreativitas dengan keahlian teknis untuk menghasilkan pengalaman digital yang luar biasa, baik secara fungsional maupun visual.">Ready to contribute professionally in a collaborative and innovative work environment. My approach combines creativity with technical expertise to deliver exceptional digital experiences that are both functional and visually appealing.</p>
+            
+            <!-- Statistics -->
+            <div class="about-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label" data-en="Semester" data-id="Semester">Semester</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label" data-en="Years Experience" data-id="Tahun Pengalaman">Years Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PORTFOLIO SECTION
+         ============================================ -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title" data-en="My Portfolio" data-id="Portofolio Saya">My Portfolio</h2>
+        <p class="section-subtitle" data-en="A collection of my best work" data-id="Koleksi karya terbaik saya">A collection of my best work</p>
+        
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all" data-en="All" data-id="Semua">All</button>
+            <button class="filter-btn" data-filter="design" data-en="Design" data-id="Desain">Design</button>
+            <button class="filter-btn" data-filter="development" data-en="Development" data-id="Development">Development</button>
+            <button class="filter-btn" data-filter="animation" data-en="Animation" data-id="Animasi">Animation</button>
+            <button class="filter-btn" data-filter="media" data-en="Photography & Video" data-id="Fotografi & Video">Photography & Video</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+            <!-- Graphic Design -->
+            <div class="portfolio-item" data-category="design">
+                <a href="portfolio/graphic-design.html">
+                    <img src="images/portfolio/graphic-design.jpg" alt="Graphic Design">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="Graphic Design" data-id="Desain Grafis">Graphic Design</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="Graphic Design" data-id="Desain Grafis">Graphic Design</h3>
+                        <p class="portfolio-category" data-en="Design" data-id="Desain">Design</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- UI/UX Design Wireframe -->
+            <div class="portfolio-item" data-category="design">
+                <a href="portfolio/uiux-wireframe.html">
+                    <img src="images/portfolio/uiux-wireframe.jpg" alt="UI/UX Wireframe">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="UI/UX Wireframe" data-id="Wireframe UI/UX">UI/UX Wireframe</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="UI/UX Wireframe" data-id="Wireframe UI/UX">UI/UX Wireframe</h3>
+                        <p class="portfolio-category" data-en="Design" data-id="Desain">Design</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Web Development -->
+            <div class="portfolio-item" data-category="development">
+                <a href="portfolio/web-development.html">
+                    <img src="images/portfolio/web-development.jpg" alt="Web Development">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="Web Development" data-id="Pengembangan Web">Web Development</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="Web Development" data-id="Pengembangan Web">Web Development</h3>
+                        <p class="portfolio-category" data-en="Development" data-id="Development">Development</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Mobile App Development -->
+            <div class="portfolio-item" data-category="development">
+                <a href="portfolio/mobile-app-dev.html">
+                    <img src="images/portfolio/mobile-app-dev.jpg" alt="Mobile App Development">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="Mobile App Dev" data-id="Pengembangan Aplikasi Mobile">Mobile App Dev</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="Mobile App Dev" data-id="Pengembangan Aplikasi Mobile">Mobile App Dev</h3>
+                        <p class="portfolio-category" data-en="Development" data-id="Development">Development</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Alarm Pintar Linux -->
+            <div class="portfolio-item" data-category="development">
+                <a href="portfolio/alarm-pintar-linux.html">
+                    <img src="images/portfolio/alarm-pintar-linux.jpg" alt="Alarm Pintar Linux">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="Smart Alarm Linux" data-id="Alarm Pintar Linux">Smart Alarm Linux</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="Smart Alarm Linux" data-id="Alarm Pintar Linux">Smart Alarm Linux</h3>
+                        <p class="portfolio-category" data-en="Development" data-id="Development">Development</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Animation 2D -->
+            <div class="portfolio-item" data-category="animation">
+                <a href="portfolio/animation-2d.html">
+                    <img src="images/portfolio/animation-2d.jpg" alt="2D Animation">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="2D Animation" data-id="Animasi 2D">2D Animation</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="2D Animation" data-id="Animasi 2D">2D Animation</h3>
+                        <p class="portfolio-category" data-en="Animation" data-id="Animasi">Animation</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Animation 3D -->
+            <div class="portfolio-item" data-category="animation">
+                <a href="portfolio/animation-3d.html">
+                    <img src="images/portfolio/animation-3d.jpg" alt="3D Animation">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="3D Animation" data-id="Animasi 3D">3D Animation</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="3D Animation" data-id="Animasi 3D">3D Animation</h3>
+                        <p class="portfolio-category" data-en="Animation" data-id="Animasi">Animation</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Visual Novel -->
+            <div class="portfolio-item" data-category="animation">
+                <a href="portfolio/visual-novel.html">
+                    <img src="images/portfolio/visual-novel.jpg" alt="Visual Novel">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="Visual Novel" data-id="Visual Novel">Visual Novel</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="Visual Novel" data-id="Visual Novel">Visual Novel</h3>
+                        <p class="portfolio-category" data-en="Animation" data-id="Animasi">Animation</p>
+                    </div>
+                    <i class="fas fa-search-plus portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Product Photography -->
+            <div class="portfolio-item" data-category="development">
+                <a href="portfolio/ml-face-recognition.html">
+                    <img src="images/portfolio/ml-face-recognition.jpg" alt="AI Face Recognition">
+                    <div class="portfolio-info">
+                        <h3 class="portfolio-title" data-en="AI Face Recognition" data-id="Rekognisi Wajah AI">AI Face Recognition</h3>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title" data-en="AI Face Recognition" data-id="Rekognisi Wajah AI">AI Face Recognition</h3>
+                        <p class="portfolio-category" data-en="Development" data-id="Development">Development</p>
+                    </div>
+                    <i class="fas fa-code portfolio-icon"></i>
+                    <div class="portfolio-item-link">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LIGHTBOX MODAL
+         ============================================ -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></span>
+        <span class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></span>
+        <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+
+    <!-- ============================================
+         SKILLS SECTION
+         ============================================ -->
+    <section class="skills" id="skills">
+        <h2 class="section-title" data-en="My Skills" data-id="Keahlian Saya">My Skills</h2>
+        <p class="section-subtitle" data-en="What I'm great at" data-id="Apa yang saya kuasai">What I'm great at</p>
+        
+        <!-- Technical Skills -->
+        <div class="skills-category">
+            <h3 class="skills-category-title" data-en="Technical Skills" data-id="Keahlian Teknis">Technical Skills</h3>
+            <div class="tech-skills-grid">
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <span class="tech-skill-name">Figma</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-sketch"></i>
+                    </div>
+                    <span class="tech-skill-name">Sketch</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <span class="tech-skill-name">HTML/CSS</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <span class="tech-skill-name">JavaScript</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <span class="tech-skill-name">React</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <span class="tech-skill-name">Blender</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <span class="tech-skill-name">Photography</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <span class="tech-skill-name">Python</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <span class="tech-skill-name">Java</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <span class="tech-skill-name">PHP</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <span class="tech-skill-name">Node.js</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <span class="tech-skill-name">MySQL</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <span class="tech-skill-name">Flutter</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <span class="tech-skill-name">Firebase</span>
+                </div>
+
+                <div class="tech-skill-item">
+                    <div class="tech-skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="tech-skill-name">VS Code</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-category">
+            <h3 class="skills-category-title" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
+            <div class="soft-skills-grid">
+                <div class="soft-skill-item">
+                    <i class="fas fa-comments"></i>
+                    <span data-en="Communication" data-id="Komunikasi">Communication</span>
+                </div>
+
+                <div class="soft-skill-item">
+                    <i class="fas fa-users"></i>
+                    <span data-en="Teamwork" data-id="Kerja Tim">Teamwork</span>
+                </div>
+
+                <div class="soft-skill-item">
+                    <i class="fas fa-microphone"></i>
+                    <span data-en="Public Speaking" data-id="Public Speaking">Public Speaking</span>
+                </div>
+
+                <div class="soft-skill-item">
+                    <i class="fas fa-clock"></i>
+                    <span data-en="Time Management" data-id="Manajemen Waktu">Time Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         ============================================ -->
+    <section class="contact" id="contact">
+        <h2 class="section-title" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</h2>
+        <p class="section-subtitle" data-en="Let's work together" data-id="Mari bekerja sama">Let's work together</p>
+        
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 data-en="Email" data-id="Email">Email</h3>
+                        <p>aryakusumaragil@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 data-en="WhatsApp" data-id="WhatsApp">WhatsApp</h3>
+                        <p>+62 877 5763 5035</p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h3 data-en="Location" data-id="Lokasi">Location</h3>
+                        <p>Surabaya, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Maps -->
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.2899628156827!2d112.79118257499743!3d-7.275824371483479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fa10ea2ae883%3A0xbe22c55d60ef09c7!2sPoliteknik%20Elektronika%20Negeri%20Surabaya!5e0!3m2!1sen!2sid!4v1701961200000!5m2!1sen!2sid" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 15px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Ragil Arya Kusuma</h3>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-id="Link Cepat">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-id="Beranda">Home</a></li>
+                        <li><a href="#about" data-en="About" data-id="Tentang">About</a></li>
+                        <li><a href="#portfolio" data-en="Portfolio" data-id="Portfolio">Portfolio</a></li>
+                        <li><a href="#skills" data-en="Skills" data-id="Keahlian">Skills</a></li>
+                        <li><a href="#contact" data-en="Contact" data-id="Kontak">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-id="Info Kontak">Contact Info</h4>
+                    <ul>
+                        <li><a href="mailto:aryakusumaragil@gmail.com"><i class="fas fa-envelope"></i> aryakusumaragil@gmail.com</a></li>
+                        <li><a href="https://wa.me/6287757635035" target="_blank"><i class="fab fa-whatsapp"></i> +62 877 5763 5035</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Surabaya, Indonesia</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Follow Me" data-id="Ikuti Saya">Follow Me</h4>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/6287757635035" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:aryakusumaragil@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Ragil Arya Kusuma. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></p>
+            <p data-en="Made with ❤️ using HTML, CSS & JavaScript" data-id="Dibuat dengan ❤️ menggunakan HTML, CSS & JavaScript">Made with ❤️ using HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         EXTERNAL SCRIPTS
+         ============================================ -->
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
