@@ -17,8 +17,11 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
     
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.1">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -74,10 +77,10 @@
          ABOUT SECTION
          ============================================ -->
     <section class="about" id="about">
-        <div class="about-image">
+        <div class="about-image" data-aos="fade-up" data-aos-duration="1000">
             <img src="images/foto_ragil.jpg" alt="Ragil Arya Kusuma">
         </div>
-        <div class="about-content">
+        <div class="about-content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <h2 data-en="About Me" data-id="Tentang Saya">About Me</h2>
             <p data-en="Student of Multimedia Engineering Technology at Politeknik Elektronika Negeri Surabaya. I have a strong interest and skills in UI/UX Design and Frontend Development with experience in interface design, website development, and creative content production such as photography, videography, and graphic design." data-id="Mahasiswa Teknologi Rekayasa Multimedia di Politeknik Elektronika Negeri Surabaya. Memiliki minat dan kemampuan di bidang UI/UX Design dan Frontend Development dengan pengalaman dalam desain antarmuka, pembuatan website, serta produksi konten kreatif seperti fotografi, videografi, dan desain grafis.">Student of Multimedia Engineering Technology at Politeknik Elektronika Negeri Surabaya. I have a strong interest and skills in UI/UX Design and Frontend Development with experience in interface design, website development, and creative content production such as photography, videography, and graphic design.</p>
             <p data-en="Ready to contribute professionally in a collaborative and innovative work environment. My approach combines creativity with technical expertise to deliver exceptional digital experiences that are both functional and visually appealing." data-id="Siap berkontribusi secara profesional dalam lingkungan kerja yang kolaboratif dan inovatif. Pendekatan saya menggabungkan kreativitas dengan keahlian teknis untuk menghasilkan pengalaman digital yang luar biasa, baik secara fungsional maupun visual.">Ready to contribute professionally in a collaborative and innovative work environment. My approach combines creativity with technical expertise to deliver exceptional digital experiences that are both functional and visually appealing.</p>
@@ -100,8 +103,8 @@
          PORTFOLIO SECTION
          ============================================ -->
     <section class="portfolio" id="portfolio">
-        <h2 class="section-title" data-en="My Portfolio" data-id="Portofolio Saya">My Portfolio</h2>
-        <p class="section-subtitle" data-en="A collection of my best work" data-id="Koleksi karya terbaik saya">A collection of my best work</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="800" data-en="My Portfolio" data-id="Portofolio Saya">My Portfolio</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-en="A collection of my best work" data-id="Koleksi karya terbaik saya">A collection of my best work</p>
         
         <!-- Filter Buttons -->
         <div class="filter-buttons">
@@ -115,7 +118,7 @@
         <!-- Portfolio Grid -->
         <div class="portfolio-grid">
             <!-- Graphic Design -->
-            <div class="portfolio-item" data-category="design">
+            <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <a href="portfolio/graphic-design.html">
                     <img src="images/portfolio/graphic-design.jpg" alt="Graphic Design">
                     <div class="portfolio-info">
@@ -133,7 +136,7 @@
             </div>
 
             <!-- UI/UX Design Wireframe -->
-            <div class="portfolio-item" data-category="design">
+            <div class="portfolio-item" data-category="design" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <a href="portfolio/uiux-wireframe.html">
                     <img src="images/portfolio/uiux-wireframe.jpg" alt="UI/UX Wireframe">
                     <div class="portfolio-info">
@@ -151,7 +154,7 @@
             </div>
 
             <!-- Web Development -->
-            <div class="portfolio-item" data-category="development">
+            <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <a href="portfolio/web-development.html">
                     <img src="images/portfolio/web-development.jpg" alt="Web Development">
                     <div class="portfolio-info">
@@ -169,7 +172,7 @@
             </div>
 
             <!-- Mobile App Development -->
-            <div class="portfolio-item" data-category="development">
+            <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <a href="portfolio/mobile-app-dev.html">
                     <img src="images/portfolio/mobile-app-dev.jpg" alt="Mobile App Development">
                     <div class="portfolio-info">
@@ -187,7 +190,7 @@
             </div>
 
             <!-- Alarm Pintar Linux -->
-            <div class="portfolio-item" data-category="development">
+            <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <a href="portfolio/alarm-pintar-linux.html">
                     <img src="images/portfolio/alarm-pintar-linux.jpg" alt="Alarm Pintar Linux">
                     <div class="portfolio-info">
@@ -205,7 +208,7 @@
             </div>
 
             <!-- Animation 2D -->
-            <div class="portfolio-item" data-category="animation">
+            <div class="portfolio-item" data-category="animation" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <a href="portfolio/animation-2d.html">
                     <img src="images/portfolio/animation-2d.jpg" alt="2D Animation">
                     <div class="portfolio-info">
@@ -223,7 +226,7 @@
             </div>
 
             <!-- Animation 3D -->
-            <div class="portfolio-item" data-category="animation">
+            <div class="portfolio-item" data-category="animation" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
                 <a href="portfolio/animation-3d.html">
                     <img src="images/portfolio/animation-3d.jpg" alt="3D Animation">
                     <div class="portfolio-info">
@@ -241,7 +244,7 @@
             </div>
 
             <!-- Visual Novel -->
-            <div class="portfolio-item" data-category="animation">
+            <div class="portfolio-item" data-category="animation" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <a href="portfolio/visual-novel.html">
                     <img src="images/portfolio/visual-novel.jpg" alt="Visual Novel">
                     <div class="portfolio-info">
@@ -259,7 +262,7 @@
             </div>
 
             <!-- Product Photography -->
-            <div class="portfolio-item" data-category="development">
+            <div class="portfolio-item" data-category="development" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                 <a href="portfolio/ml-face-recognition.html">
                     <img src="images/portfolio/ml-face-recognition.jpg" alt="AI Face Recognition">
                     <div class="portfolio-info">
@@ -292,13 +295,13 @@
          SKILLS SECTION
          ============================================ -->
     <section class="skills" id="skills">
-        <h2 class="section-title" data-en="My Skills" data-id="Keahlian Saya">My Skills</h2>
-        <p class="section-subtitle" data-en="What I'm great at" data-id="Apa yang saya kuasai">What I'm great at</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="800" data-en="My Skills" data-id="Keahlian Saya">My Skills</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-en="What I'm great at" data-id="Apa yang saya kuasai">What I'm great at</p>
         
         <!-- Technical Skills -->
         <div class="skills-category">
-            <h3 class="skills-category-title" data-en="Technical Skills" data-id="Keahlian Teknis">Technical Skills</h3>
-            <div class="tech-skills-grid">
+            <h3 class="skills-category-title" data-aos="fade-up" data-aos-duration="800" data-en="Technical Skills" data-id="Keahlian Teknis">Technical Skills</h3>
+            <div class="tech-skills-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="tech-skill-item">
                     <div class="tech-skill-icon">
                         <i class="fab fa-figma"></i>
@@ -408,8 +411,8 @@
 
         <!-- Soft Skills -->
         <div class="skills-category">
-            <h3 class="skills-category-title" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
-            <div class="soft-skills-grid">
+            <h3 class="skills-category-title" data-aos="fade-up" data-aos-duration="800" data-en="Soft Skills" data-id="Soft Skills">Soft Skills</h3>
+            <div class="soft-skills-grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                 <div class="soft-skill-item">
                     <i class="fas fa-comments"></i>
                     <span data-en="Communication" data-id="Komunikasi">Communication</span>
@@ -437,10 +440,10 @@
          CONTACT SECTION
          ============================================ -->
     <section class="contact" id="contact">
-        <h2 class="section-title" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</h2>
-        <p class="section-subtitle" data-en="Let's work together" data-id="Mari bekerja sama">Let's work together</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="800" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100" data-en="Let's work together" data-id="Mari bekerja sama">Let's work together</p>
         
-        <div class="contact-container">
+        <div class="contact-container" data-aos="fade-up" data-aos-duration="1000">
             <!-- Contact Information -->
             <div class="contact-info">
                 <div class="contact-card">
@@ -534,7 +537,7 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 Ragil Arya Kusuma. <span data-en="All rights reserved." data-id="Hak cipta dilindungi.">All rights reserved.</span></p>
-            <p data-en="Made with Love using HTML, CSS & JavaScript" data-id="Dibuat dengan Cinta menggunakan HTML, CSS & JavaScript">Made with Love using HTML, CSS & JavaScript</p>
+            <p data-en="Made using HTML, CSS & JavaScript" data-id="Dibuat menggunakan HTML, CSS & JavaScript">Made using HTML, CSS & JavaScript</p>
         </div>
     </footer>
 
@@ -544,7 +547,10 @@
     <!-- Particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
     <!-- Main JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js?v=1.1"></script>
 </body>
 </html>
