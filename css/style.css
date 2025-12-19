@@ -1536,6 +1536,14 @@ footer {
         gap: 3rem;
     }
 
+    .about-content {
+        text-align: center;
+    }
+
+    .about-image {
+        order: 1;
+    }
+
     .about-image img {
         height: 400px;
         border-radius: 15px;
