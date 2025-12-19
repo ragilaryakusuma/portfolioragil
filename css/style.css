@@ -1502,7 +1502,7 @@ footer {
     }
 
     .hero-image {
-        order: -1;
+        order: 1;
     }
 
     .hero-image-wrapper {
