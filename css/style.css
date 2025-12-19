@@ -9,7 +9,7 @@
     --text-color: #333;
     --bg-color: #fff;
     --card-bg: #f8f9fa;
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark-mode {
@@ -55,12 +55,37 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body * {
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ==========================================================================
+   Theme-based Image Visibility
+   ========================================================================== */
+
+/* Hide dark mode images by default (light mode) */
+.dark-mode-img {
+    display: none !important;
+}
+
+/* Show light mode images by default */
+.light-mode-img {
+    display: block;
+}
+
+/* When dark mode is active */
+.dark-mode .dark-mode-img {
+    display: block !important;
+}
+
+.dark-mode .light-mode-img {
+    display: none !important;
 }
 
 /* ==========================================================================
@@ -209,16 +234,158 @@ body * {
     pointer-events: all;
 }
 
-.hero-content {
+.hero-container {
     position: relative;
     z-index: 2;
-    text-align: center;
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 2rem 4rem;
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: left;
     pointer-events: none;
 }
 
 .hero-content * {
     pointer-events: auto;
+}
+
+/* Hero Image Section */
+.hero-image {
+    position: relative;
+    pointer-events: none;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.hero-image-wrapper:hover {
+    transform: translateY(-8px) translateZ(0);
+}
+
+/* Photo Frame with Custom Silhouette Outline */
+.hero-photo-frame {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+}
+
+.hero-photo-frame:hover {
+    /* No outline */
+}
+
+/* Outline layers - mengikuti bentuk orang di foto */
+.hero-photo-outline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    /* Disable outline for performance */
+}
+
+.outline-1 {
+    opacity: 0;
+}
+
+.outline-2 {
+    opacity: 0;
+}
+
+.dark-mode .outline-1 {
+    opacity: 0;
+}
+
+.dark-mode .outline-2 {
+    opacity: 0;
+}
+
+/* Remove heavy animations */
+@keyframes pulseOutline1 {
+    0%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulseOutline2 {
+    0%, 100% {
+        opacity: 0;
+    }
+}
+
+.hero-photo {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    z-index: 2;
+    will-change: transform;
+    transform: translateZ(0);
+    /* Remove heavy shadow */
+}
+
+.dark-mode .hero-photo {
+    /* No shadow for better performance */
+}
+
+.hero-photo-frame:hover .hero-photo {
+    transform: scale(1.02) translateZ(0);
+}
+
+.hero-photo-frame:hover {
+    /* Simple hover without shadow */
+}
+
+.dark-mode .hero-photo-frame:hover {
+    /* No shadow for better performance */
+}
+
+/* Gradient overlay at bottom for smooth transition */
+.photo-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.dark-mode .photo-gradient-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(10, 10, 10, 0.4) 0%,
+        rgba(10, 10, 10, 0.15) 50%,
+        transparent 100%
+    );
 }
 
 .hero-label {
@@ -251,8 +418,7 @@ body * {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 60px;
     height: 2px;
     background: var(--accent-color);
@@ -1318,6 +1484,29 @@ footer {
     .hero {
         min-height: 100vh;
         padding: 2rem 1.5rem;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 1.5rem;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-specialty::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image-wrapper {
+        max-width: 350px;
     }
 
     .hero-title {

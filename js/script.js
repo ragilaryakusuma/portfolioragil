@@ -22,44 +22,47 @@ AOS.init({
 // Particles.js Configuration
 // ==========================================================================
 
-particlesJS('particles-js', {
-    particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: '#000000' },
-        shape: { type: 'circle' },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        line_linked: {
-            enable: true,
-            distance: 150,
-            color: '#000000',
-            opacity: 0.4,
-            width: 1
+// Only initialize particles if the element exists (homepage only)
+if (document.getElementById('particles-js')) {
+    particlesJS('particles-js', {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#000000' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5, random: false },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#000000',
+                opacity: 0.4,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 2,
+                direction: 'none',
+                random: false,
+                straight: false,
+                out_mode: 'out',
+                bounce: false
+            }
         },
-        move: {
-            enable: true,
-            speed: 2,
-            direction: 'none',
-            random: false,
-            straight: false,
-            out_mode: 'out',
-            bounce: false
-        }
-    },
-    interactivity: {
-        detect_on: 'canvas',
-        events: {
-            onhover: { enable: true, mode: 'repulse' },
-            onclick: { enable: true, mode: 'push' },
-            resize: true
+        interactivity: {
+            detect_on: 'canvas',
+            events: {
+                onhover: { enable: true, mode: 'repulse' },
+                onclick: { enable: true, mode: 'push' },
+                resize: true
+            },
+            modes: {
+                repulse: { distance: 100, duration: 0.4 },
+                push: { particles_nb: 4 }
+            }
         },
-        modes: {
-            repulse: { distance: 100, duration: 0.4 },
-            push: { particles_nb: 4 }
-        }
-    },
-    retina_detect: true
-});
+        retina_detect: true
+    });
+}
 
 // Update particles color based on theme
 function updateParticlesColor() {
@@ -115,36 +118,70 @@ window.addEventListener('scroll', () => {
 });
 
 // ==========================================================================
-// Theme Toggle (Dark/Light Mode)
+// Theme Toggle (Dark/Light Mode) - IMMEDIATE EXECUTION
 // ==========================================================================
 
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
+// CRITICAL: Load theme IMMEDIATELY before page renders to prevent flash
+(function() {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+        document.body.classList.add('dark-mode');
+    }
+})();
 
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+// Initialize theme toggle functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    
+    if (!themeToggle) return;
+    
     const icon = themeToggle.querySelector('i');
     
-    if (body.classList.contains('dark-mode')) {
+    // Set correct icon based on current theme
+    if (body.classList.contains('dark-mode') && icon) {
         icon.classList.remove('bi-moon-stars-fill');
         icon.classList.add('bi-sun-fill');
-        localStorage.setItem('theme', 'dark');
-    } else {
-        icon.classList.remove('bi-sun-fill');
-        icon.classList.add('bi-moon-stars-fill');
-        localStorage.setItem('theme', 'light');
     }
     
-    // Update particles color when theme changes
-    updateParticlesColor();
-});
+    // Toggle theme on click
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        document.documentElement.classList.toggle('dark-mode');
+        
+        const icon = themeToggle.querySelector('i');
+        
+        if (body.classList.contains('dark-mode')) {
+            if (icon) {
+                icon.classList.remove('bi-moon-stars-fill');
+                icon.classList.add('bi-sun-fill');
+            }
+            localStorage.setItem('theme', 'dark');
+        } else {
+            if (icon) {
+                icon.classList.remove('bi-sun-fill');
+                icon.classList.add('bi-moon-stars-fill');
+            }
+            localStorage.setItem('theme', 'light');
+        }
+        
+        // Update particles if available
+        if (typeof updateParticlesColor === 'function') {
+            updateParticlesColor();
+        }
+    });
+    
+    // Update particles on load if available
+    if (typeof updateParticlesColor === 'function') {
+        setTimeout(updateParticlesColor, 100);
+    }
+}
 
-// Load saved theme from localStorage
-if (localStorage.getItem('theme') === 'dark') {
-    body.classList.add('dark-mode');
-    themeToggle.querySelector('i').classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-    // Update particles color on load
-    setTimeout(updateParticlesColor, 100);
+// Run when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
+} else {
+    initThemeToggle();
 }
 
 // ==========================================================================

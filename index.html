@@ -21,7 +21,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Main CSS -->
-    <link rel="stylesheet" href="css/style.css?v=1.1">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Custom Cursor -->
@@ -58,14 +58,34 @@
          ============================================ -->
     <section class="hero" id="home">
         <div id="particles-js"></div>
-        <div class="hero-content">
-            <p class="hero-label" data-en="— PORTFOLIO —" data-id="— PORTFOLIO —">— PORTFOLIO —</p>
-            <p class="hero-specialty" data-en="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist" data-id="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist">UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist</p>
-            <h1 class="hero-title" data-en="RAGIL ARYA KUSUMA" data-id="RAGIL ARYA KUSUMA">RAGIL ARYA KUSUMA</h1>
-            <p class="hero-subtitle" data-en="Multimedia Engineering Technology Student at PENS" data-id="Mahasiswa Teknologi Rekayasa Multimedia PENS">Multimedia Engineering Technology Student at PENS</p>
-            <div class="hero-cta">
-                <a href="#portfolio" class="btn btn-primary" data-en="View My Work" data-id="Lihat Karya Saya">View My Work</a>
-                <a href="#contact" class="btn btn-outline" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</a>
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+                <p class="hero-label" data-en="— PORTFOLIO —" data-id="— PORTFOLIO —">— PORTFOLIO —</p>
+                <p class="hero-specialty" data-en="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist" data-id="UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist">UI/UX Designer | FrontEnd Dev | Mobile App Dev | Multimedia Specialist</p>
+                <h1 class="hero-title" data-en="RAGIL ARYA KUSUMA" data-id="RAGIL ARYA KUSUMA">RAGIL ARYA KUSUMA</h1>
+                <p class="hero-subtitle" data-en="Multimedia Engineering Technology Student at PENS" data-id="Mahasiswa Teknologi Rekayasa Multimedia PENS">Multimedia Engineering Technology Student at PENS</p>
+                <div class="hero-cta">
+                    <a href="#portfolio" class="btn btn-primary" data-en="View My Work" data-id="Lihat Karya Saya">View My Work</a>
+                    <a href="#contact" class="btn btn-outline" data-en="Get In Touch" data-id="Hubungi Saya">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <div class="hero-image-wrapper">
+                    <!-- Photo container with custom outline -->
+                    <div class="hero-photo-frame">
+                        <!-- Light Mode Images -->
+                        <img src="images/mode-terang.png" alt="" class="hero-photo-outline outline-1 light-mode-img">
+                        <img src="images/mode-terang.png" alt="" class="hero-photo-outline outline-2 light-mode-img">
+                        <img src="images/mode-terang.png" alt="Ragil Arya Kusuma" class="hero-photo light-mode-img">
+                        
+                        <!-- Dark Mode Images -->
+                        <img src="images/mode-gelap.png" alt="" class="hero-photo-outline outline-1 dark-mode-img">
+                        <img src="images/mode-gelap.png" alt="" class="hero-photo-outline outline-2 dark-mode-img">
+                        <img src="images/mode-gelap.png" alt="Ragil Arya Kusuma" class="hero-photo dark-mode-img">
+                        
+                        <div class="photo-gradient-overlay"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -551,6 +571,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
     <!-- Main JavaScript -->
-    <script src="js/script.js?v=1.1"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

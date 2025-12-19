@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/style.css">
     
+    <!-- Dark Mode: Load immediately to prevent flash -->
+    <script>
+        (function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+    
     <style>
         .portfolio-detail {
             min-height: 100vh;
@@ -203,25 +213,21 @@
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
     <div class="scroll-progress"></div>
-    
-    <div class="theme-toggle" id="themeToggle">
-        <i class="bi bi-moon-stars-fill"></i>
-    </div>
 
     <section class="portfolio-detail">
         <div class="detail-container">
             <a href="../index.html#portfolio" class="back-btn">
                 <i class="fas fa-arrow-left"></i>
-                <span data-en="Back to Portfolio" data-id="Kembali ke Portfolio">Back to Portfolio</span>
+                <span data-en="Back to Portfolio" data-id="Kembali ke Portfolio">Kembali ke Portfolio</span>
             </a>
             
             <div class="detail-header">
-                <h1 class="detail-title" data-en="UI/UX Wireframe" data-id="Wireframe UI/UX">UI/UX Wireframe</h1>
+                <h1 class="detail-title" data-en="UI/UX Wireframe" data-id="Wireframe UI/UX">Wireframe UI/UX</h1>
                 
                 <div class="detail-meta">
                     <div class="meta-item">
-                        <span class="meta-label" data-en="Category" data-id="Kategori">CATEGORY</span>
-                        <span class="meta-value" data-en="Design" data-id="Desain">Design</span>
+                        <span class="meta-label" data-en="Category" data-id="Kategori">KATEGORI</span>
+                        <span class="meta-value" data-en="Design" data-id="Desain">Desain</span>
                     </div>
                     <div class="meta-item">
                         <span class="meta-label" data-en="Tools" data-id="Tools">TOOLS</span>
@@ -231,22 +237,22 @@
             </div>
             
             <div class="detail-description" data-en="Comprehensive UI/UX wireframe designs that prioritize user-centered approach and seamless interaction flows. These wireframes serve as the foundation for creating intuitive digital experiences, focusing on usability testing, information architecture, and responsive design principles to ensure optimal user engagement." data-id="Desain wireframe UI/UX komprehensif yang memprioritaskan pendekatan berpusat pada pengguna dan alur interaksi yang mulus. Wireframe ini berfungsi sebagai fondasi untuk menciptakan pengalaman digital yang intuitif, berfokus pada pengujian kegunaan, arsitektur informasi, dan prinsip desain responsif untuk memastikan keterlibatan pengguna yang optimal.">
-                Comprehensive UI/UX wireframe designs that prioritize user-centered approach and seamless interaction flows. These wireframes serve as the foundation for creating intuitive digital experiences, focusing on usability testing, information architecture, and responsive design principles to ensure optimal user engagement.
+                Desain wireframe UI/UX komprehensif yang memprioritaskan pendekatan berpusat pada pengguna dan alur interaksi yang mulus. Wireframe ini berfungsi sebagai fondasi untuk menciptakan pengalaman digital yang intuitif, berfokus pada pengujian kegunaan, arsitektur informasi, dan prinsip desain responsif untuk memastikan keterlibatan pengguna yang optimal.
             </div>
             
-            <h2 class="section-heading" data-en="Project Gallery" data-id="Galeri Proyek">Project Gallery</h2>
+            <h2 class="section-heading" data-en="Project Gallery" data-id="Galeri Proyek">Galeri Proyek</h2>
             <div class="detail-images">
                 <div class="image-wrapper">
                     <img src="../images/portfolio/detail/uiux-wireframe/1.jpg" alt="Mobile App Wireframe" class="detail-image">
-                    <p class="image-caption" data-en="Mobile App Wireframe" data-id="Wireframe Aplikasi Mobile">Mobile App Wireframe</p>
+                    <p class="image-caption" data-en="Mobile App Wireframe" data-id="Wireframe Aplikasi Mobile">Wireframe Aplikasi Mobile</p>
                 </div>
                 <div class="image-wrapper">
                     <img src="../images/portfolio/detail/uiux-wireframe/2.jpg" alt="Web Dashboard Layout" class="detail-image">
-                    <p class="image-caption" data-en="Web Dashboard Layout" data-id="Layout Dashboard Web">Web Dashboard Layout</p>
+                    <p class="image-caption" data-en="Web Dashboard Layout" data-id="Layout Dashboard Web">Layout Dashboard Web</p>
                 </div>
             </div>
             
-            <h2 class="section-heading" data-en="Tools & Technologies" data-id="Tools & Teknologi">Tools & Technologies</h2>
+            <h2 class="section-heading" data-en="Tools & Technologies" data-id="Tools & Teknologi">Tools & Teknologi</h2>
             <div class="tech-stack">
                 <span class="tech-tag">Figma</span>
                 <span class="tech-tag">Adobe XD</span>
