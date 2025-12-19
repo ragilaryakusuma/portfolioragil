@@ -478,6 +478,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==========================================================================
+// Image Protection - Prevent Download/Save
+// ==========================================================================
+
+// Block right-click on all images
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.hero-photo, .about-image img');
+    
+    images.forEach(img => {
+        // Prevent right-click
+        img.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        // Prevent drag
+        img.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    });
+});
+
+// ==========================================================================
 // Initialize on Page Load
 // ==========================================================================
 
