@@ -1,8 +1,8 @@
-# 🎨 Portfolio Website - Ragil Arya
+# Portfolio Website - Ragil Arya
 
 Modern and creative portfolio website dengan animasi interaktif, lightbox gallery, dan bilingual support (EN/ID).
 
-## 📁 Struktur Folder
+## Struktur Folder
 
 ```
 Web-Portofolio/
@@ -23,34 +23,34 @@ Web-Portofolio/
     └── (your videos here)
 ```
 
-## ✨ Fitur Utama
+## Fitur Utama
 
-### 🎯 Interactive Features
+### Interactive Features
 - **Custom Cursor** - Cursor unik dengan follower effect
 - **Scroll Progress Bar** - Indikator progress scroll di bagian atas
 - **Dark/Light Mode** - Toggle tema dengan animasi smooth + localStorage
 - **Bilingual (EN/ID)** - Switch bahasa English/Indonesian
 - **Smooth Scroll** - Navigasi smooth antar section
 
-### 🖼️ Portfolio Gallery
+### Portfolio Gallery
 - **Filter System** - Filter by All, Design, Video, Photography
 - **Lightbox Modal** - Zoom foto/video fullscreen dengan navigation
 - **Video Auto-play** - Video play otomatis saat hover
 - **Keyboard Navigation** - Arrow keys & Escape untuk lightbox
 
-### 🎨 Animations
+### Animations
 - **Particles.js Background** - Efek partikel interaktif di hero section
 - **Fade In Up** - Element muncul dengan animasi dari bawah
 - **Counter Animation** - Angka statistik naik otomatis
 - **Progress Bars** - Skill bars animated saat masuk viewport
 - **Image Shine Effect** - Efek shine pada hover image
 
-### 📱 Responsive Design
+### Responsive Design
 - Mobile, tablet, desktop optimized
 - Touch-friendly interactions
 - Adaptive layouts untuk semua screen sizes
 
-## 🚀 Cara Menggunakan
+## Cara Menggunakan
 
 ### 1. Setup Awal
 1. Download/clone folder project ini
@@ -123,7 +123,7 @@ Edit `css/style.css` untuk mengubah:
 - **Fonts**: Ganti Google Fonts link di `<head>`
 - **Animations**: Edit keyframes di bagian Animations
 
-## 🎨 Color Palette
+## Color Palette
 
 ### Light Mode
 - Primary: `#000` (Black)
@@ -138,13 +138,13 @@ Edit `css/style.css` untuk mengubah:
 - Background: `#0a0a0a` (Dark Gray)
 - Card BG: `#1a1a1a` (Darker Gray)
 
-## 📚 Libraries Used
+## Libraries Used
 
 - [Particles.js](https://vincentgarreau.com/particles.js/) - Interactive particles background
 - [Font Awesome 6](https://fontawesome.com/) - Icons
 - [Google Fonts](https://fonts.google.com/) - Typography (Playfair Display, Space Grotesk)
 
-## 🔧 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -152,7 +152,7 @@ Edit `css/style.css` untuk mengubah:
 - Edge (latest)
 - Mobile browsers
 
-## 📝 Sections Overview
+## Sections Overview
 
 1. **Hero** - Landing section dengan nama dan CTA buttons
 2. **About** - Informasi personal + statistics counter
@@ -161,14 +161,14 @@ Edit `css/style.css` untuk mengubah:
 5. **Contact** - Form dan contact information
 6. **Footer** - Social media links
 
-## 💡 Tips
+## Tips
 
 - **Optimasi Gambar**: Compress gambar sebelum upload untuk loading lebih cepat
 - **Video Format**: Gunakan MP4 untuk kompatibilitas maksimal
 - **Image Size**: Recommended 1200x900px untuk portfolio items
 - **Local Testing**: Gunakan Live Server extension di VS Code untuk testing
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 **Q: Particles tidak muncul?**
 A: Pastikan CDN particles.js terload dengan baik (check console)
@@ -179,11 +179,11 @@ A: Check localStorage di browser settings, pastikan tidak di-disable
 **Q: Video tidak autoplay?**
 A: Pastikan attribute `muted` ada pada `<video>` tag
 
-## 📄 License
+## License
 
 Free to use untuk personal dan commercial projects.
 
-## 👤 Author
+## Author
 
 **Ragil Arya**
 - Website: [Your Website]
@@ -191,4 +191,4 @@ Free to use untuk personal dan commercial projects.
 
 ---
 
-**Made with ❤️ by Ragil Arya**
+**Made with  by Ragil Arya**
