@@ -186,9 +186,9 @@ Free to use untuk personal dan commercial projects.
 ## Author
 
 **Ragil Arya**
-- Website: [Your Website]
-- Email: ragilarya@example.com
+- Website: ragilaryakusuma.site
+- Email: ragilarya@gmail.com
 
 ---
 
-**Made with  by Ragil Arya**
+**Made by Ragil Arya**
